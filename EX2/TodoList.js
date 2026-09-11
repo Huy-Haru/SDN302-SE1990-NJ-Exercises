@@ -8,13 +8,13 @@ class TodoList {
   }
 
   getItemTitles() {
-    return this.items.map((item) => item.title);
+    return this.items.map(({ title }) => title);
   }
 
   displayItemsWithStatus() {
-    this.items.forEach((item, index) => {
+    this.items.forEach(({ title, completed }, index) => {
       console.log(
-        `${index + 1}. [${item.completed ? "X" : " "}] ${item.title}`,
+        `${index + 1}. [${completed ? "X" : " "}] ${title}`,
       );
     });
     console.log(""); // Add an empty line for better readability
