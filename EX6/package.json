@@ -1,0 +1,16 @@
+{
+  "name": "ex6",
+  "version": "1.0.0",
+  "description": "Express JSON file handling and articles/videos CRUD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:data": "node server.js",
+    "test": "node --test"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
