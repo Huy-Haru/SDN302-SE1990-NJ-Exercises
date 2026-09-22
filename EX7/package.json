@@ -1,0 +1,15 @@
+{
+  "name": "ex7",
+  "version": "1.0.0",
+  "description": "Express routes separated into article and video routers",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
