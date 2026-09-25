@@ -1,0 +1,15 @@
+{
+  "name": "ex9",
+  "version": "1.0.0",
+  "description": "Express custom middleware for article validation",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test --test-isolation=none"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
