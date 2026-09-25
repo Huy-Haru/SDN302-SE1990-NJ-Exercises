@@ -1,5 +1,5 @@
 const express = require("express");
-const initialVideos = require("../videos");
+const initialVideos = require("../db.json").videos;
 const HttpError = require("../errors/HttpError");
 
 const router = express.Router();

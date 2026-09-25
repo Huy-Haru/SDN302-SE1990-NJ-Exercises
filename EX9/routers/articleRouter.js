@@ -1,5 +1,5 @@
 const express = require("express");
-const initialArticles = require("../articles");
+const initialArticles = require("../db.json").articles;
 const {
   validateArticle,
   validateArticleDate,
