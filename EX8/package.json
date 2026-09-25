@@ -1,0 +1,15 @@
+{
+  "name": "ex8",
+  "version": "1.0.0",
+  "description": "Express centralized error handling for article and video routers",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test --test-isolation=none"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
