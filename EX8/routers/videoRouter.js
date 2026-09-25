@@ -7,13 +7,8 @@ const videos = structuredClone(initialVideos);
 let nextId = Math.max(0, ...videos.map((video) => video.id)) + 1;
 
 function validateBody(req, res, next) {
-  if (!req.body || typeof req.body !== "object" || Array.isArray(req.body)) {
-    return next(new HttpError(400, "Send a JSON object"));
-  }
-  if (req.method === "POST" || Object.hasOwn(req.body, "title")) {
-    if (typeof req.body.title !== "string" || !req.body.title.trim()) {
-      return next(new HttpError(400, "A non-empty title is required"));
-    }
+  if (typeof req.body.title !== "string" || req.body.title.trim() === "") {
+    return next(new HttpError(400, "A non-empty title is required"));
   }
   next();
 }
@@ -43,7 +38,7 @@ router.post("/:id", (req, res) => {
 
 router.use("/:id", (req, res, next) => {
   const id = Number(req.params.id);
-  if (!/^\d+$/.test(req.params.id) || !Number.isSafeInteger(id) || id < 1) {
+  if (!Number.isInteger(id) || id <= 0) {
     return next(new HttpError(400, "ID must be a positive integer"));
   }
   const index = videos.findIndex((video) => video.id === id);
