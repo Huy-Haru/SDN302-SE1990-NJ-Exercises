@@ -1,0 +1,28 @@
+{
+  "name": "exercise-17",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Applying MVC",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "mongoose": "8.10.1"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "10.1.4"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "version": "8.0.32",
+      "disablePostinstall": true
+    }
+  }
+}
