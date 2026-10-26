@@ -1,0 +1,21 @@
+{
+  "name": "sdn302-practice-he190724",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SDN302 Practice - MVC REST API",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1"
+  }
+}
